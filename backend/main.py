@@ -5,6 +5,9 @@ from fastapi.middleware.cors import CORSMiddleware
 from route_types import Subscriber
 from db import supabase_client
 
+# TODO
+# Add mailer/scheduler
+# Fix favicon.ico
 
 app = FastAPI()
 origins = ["http://localhost:3000"]
@@ -13,8 +16,6 @@ app.add_middleware(
     allow_origins=origins,
     allow_methods=["POST"],
 )
-
-
 
 @app.post("/")
 def add_subscriber(subscriber: Subscriber) -> Subscriber:
