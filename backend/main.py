@@ -2,8 +2,8 @@ from dotenv import load_dotenv
 load_dotenv()
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from route_types import Subscriber
-from db import supabase_client
+from backend.utils.route_types import Subscriber
+from backend.utils.db import supabase_client
 
 # TODO
 # Add mailer/scheduler
@@ -19,6 +19,8 @@ app.add_middleware(
 
 @app.post("/")
 def add_subscriber(subscriber: Subscriber) -> Subscriber:
+    # Make sure topic is safe
+
     # Insert into db
     supabase_client.table("subscribers").insert({
         "email": subscriber.email,
