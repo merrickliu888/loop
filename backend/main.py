@@ -8,6 +8,7 @@ from backend.utils.db import supabase_client
 # TODO
 # Add mailer/scheduler
 # Fix favicon.ico
+# Check out https://taddy.org/developers/podcast-api for podcasts
 
 app = FastAPI()
 origins = ["http://localhost:3000"]
