@@ -6,7 +6,10 @@ An daily email that keeps you in/gets you in the loop of your area of interest.
 
 -   Create email scheduler
 -   Create email template
--   Integrate 2 APIs
+-   Integrate 3 APIs
+    -   Youtube
+    -   Arvix
+    -   Podcast
 
 ### TODO
 
@@ -22,6 +25,8 @@ An daily email that keeps you in/gets you in the loop of your area of interest.
     -   Medium
     -   Maybe use LLMs to decide which sources are neccesary and search prompt
 -   Create loop email account
+-   Use llms to decide if topic is safe
+-   Use llm to rank relevant sources
 
 ### Things to think about
 
