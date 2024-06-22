@@ -1,9 +1,13 @@
-source_list = ["youtube", "arvix"]
+source_list = ["youtube", "arxiv", "taddy"]
 
 videos = {
     "youtube"
 }
 
 research_papers = {
-    "arvix"
+    "arxiv"
+}
+
+podcasts = {
+    "taddy"
 }
