@@ -11,6 +11,7 @@ langchain-cohere = "*"
 youtube-transcript-api = "*"
 google-api-python-client = "*"
 celery = {extras = ["redis"], version = "*"}
+arxiv = "*"
 
 [dev-packages]
 
