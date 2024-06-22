@@ -20,9 +20,6 @@ app.add_middleware(
 
 @app.post("/")
 def add_subscriber(subscriber: Subscriber) -> Subscriber:
-    # Make sure topic is safe
-
-    # Insert into db
     supabase_client.table("subscribers").insert({
         "email": subscriber.email,
         "topic": subscriber.topic,
