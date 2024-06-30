@@ -22,7 +22,7 @@ app.add_middleware(
 @app.post("/")
 def add_subscriber(subscriber: Subscriber, supabase_client: Client = Depends(create_supabase_client)) -> Subscriber:
     supabase_client.table("subscribers").insert({
-        "email": subscriber.email,
+        "email_address": subscriber.email,
         "topic": subscriber.topic,
         "time": subscriber.time
     }).execute()

@@ -18,7 +18,7 @@ def create_email_body(recipient_email: str) -> str:
     supabase_cleint = create_supabase_client()
 
     # Get topic of interest from supabase
-    topic = supabase_cleint.table("subscribers").select("topic").eq("email", recipient_email).execute().get("data")[0]
+    topic = supabase_cleint.table("subscribers").select("topic").eq("email_address", recipient_email).execute()
     
     sources = {
         "Youtube": [],
