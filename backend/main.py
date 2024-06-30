@@ -1,9 +1,10 @@
 from dotenv import load_dotenv
 load_dotenv()
-from fastapi import FastAPI
+from fastapi import FastAPI, Depends
 from fastapi.middleware.cors import CORSMiddleware
 from backend.utils.route_types import Subscriber
-from backend.utils.db import supabase_client
+from backend.utils.db import create_supabase_client
+from supabase import Client
 
 # TODO
 # Add mailer/scheduler
@@ -19,7 +20,7 @@ app.add_middleware(
 )
 
 @app.post("/")
-def add_subscriber(subscriber: Subscriber) -> Subscriber:
+def add_subscriber(subscriber: Subscriber, supabase_client: Client = Depends(create_supabase_client)) -> Subscriber:
     supabase_client.table("subscribers").insert({
         "email": subscriber.email,
         "topic": subscriber.topic,
