@@ -2,8 +2,8 @@ from dotenv import load_dotenv
 load_dotenv()
 from fastapi import FastAPI, Depends
 from fastapi.middleware.cors import CORSMiddleware
-from backend.utils.route_types import Subscriber
-from backend.utils.db import create_supabase_client
+from utils.route_types import Subscriber
+from utils.db import create_supabase_client
 from supabase import Client
 
 # TODO
